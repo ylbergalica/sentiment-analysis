@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/global.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import InputFields from './components/InputFields.js';
+import Results from "./components/Results";
+
+import { AnalyzerProvider } from "./context/analyzer-context";
+
+export default function App() {
+	return (
+		<AnalyzerProvider>
+			<div className='w-full h-[10vh] flex flex-col justify-center items-center'>
+				<h1 className='text-2xl'>Sentiment Analyzer</h1>
+			</div>
+
+			<div className='w-full h-[80vh] flex flex-col justify-center items-center'>
+				<InputFields prompt='Give me a sentence:' submit="Analyze" />
+				<Results />
+			</div>
+		</AnalyzerProvider>
+	)
 }
-
-export default App;
