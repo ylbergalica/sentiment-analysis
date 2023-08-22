@@ -1,5 +1,5 @@
-import Sentiment from 'sentiment';
 import { useContext, useRef } from 'react';
+import analyze from '../../data/analyze';
 
 import { AnalyzerContext } from '../../context/analyzer-context';
 
@@ -7,13 +7,10 @@ const InputFields = ({ prompt, submit }) => {
 	const { setResult, setSentiment } = useContext(AnalyzerContext);
 	const text = useRef(null);
 
-	const sentimentAnalyzer = new Sentiment();
-
-	const analyze = async () => {
-		const result = sentimentAnalyzer.analyze(text.current.value);
+	analyze(text).then(result => {
 		setResult(result);
-		setSentiment(result.score === 0 ? "Neutral" : result.score > 0 ? "Positive" : "Negative");
-	};
+		setSentiment(result.score > 0 ? "Positive" : result.score < 0 ? "Negative" : "Neutral");
+	});
 
 	return (
 		<div className="flex flex-col items-center w-full">
