@@ -2,6 +2,26 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### How To Run
+
+Link to the hosted website: https://master--cute-kataifi-09cd8d.netlify.app/
+
+If you find that the website is no longer available or you want to run the app locally, fork the repo or download it to your computer.
+
+After cloning, run the following in the project directory terminal to install all dependencies
+```
+npm install
+```
+
+To get a quick development server going, run the following in the project directory terminal
+```
+npm start
+```
+
+A new window with the running app will automatically pop up. If it hasn't, check the terminal and look for `Local: http://localhost:[port]`, copy the link and paste it in your brower.
+
+You're all set!
+
 ## Available Scripts
 
 In the project directory, you can run:
