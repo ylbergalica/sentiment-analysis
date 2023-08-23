@@ -4,7 +4,7 @@
 
 Link to the hosted website: https://master--cute-kataifi-09cd8d.netlify.app/
 
-If you find that the website is no longer available or you want to run the app locally, clone the repo or download it to your computer.
+If you find that the website is no longer available or you want to run the app locally, fork the repo or download it to your computer.
 
 After cloning, run the following in the project directory terminal to install all dependencies
 ```
