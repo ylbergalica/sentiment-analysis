@@ -8,6 +8,8 @@ const sentimentAnalyzer = new Sentiment();
  * @param {string} text - The text to be analyzed.
  * @returns {Promise<object>} A promise that resolves to an object containing the resulting object.
  */
-export default async (text) => {
+const analyze = async (text) => {
 	return sentimentAnalyzer.analyze(text);
 };
+
+export default analyze;
